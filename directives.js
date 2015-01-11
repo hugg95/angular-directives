@@ -54,11 +54,17 @@ directives.directive('vCheckbox', function() {
                     }
                     __checkedList.limited = true;
                 } else if (__checkedList.length >= 8) {
-                    var index = [];
                     for (i = 0; i < scope.checkList.length; i++) {
+                        var equals = false;
                         for (var j = 0; j < __checkedList.length; j++) {
-                            if (scope.) {
+                            if (scope.checkList[i] === __checkedList[j]) {
+                                equals = true;
                             }
+                        }
+                        if (!equals) {
+                            scope.checkList[i].valid = false;
+                        } else {
+                            scope.checkList[i].valid = true;
                         }
                     }
                 } else {
