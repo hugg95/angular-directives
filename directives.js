@@ -22,13 +22,15 @@ directives.directive('vCheckbox', function() {
             ngModel: '=',
             checkedList: '='
         },
-        template: '<span ng-repeat="item in items">'
+        template: '<span ng-repeat="item in checkList">'
                   + '<span>{{item.name}}</span>'
-                  + '<input type="checkbox" ng-checked="item.checked" value="item.value" />'
+                  + '<input type="checkbox" ng-checked="checked(item);" ng-disabled="!item.valid" ng-click="check(item);" value="item.value" />'
                   + '</div>',
         link: function(scope, eles, attrs) {
-            console.log(scope.ngModel);
-            scope.items = scope.ngModel;
+
+            scope.checkList = scope.ngModel;
+            var __checkedList = scope.checkedList;
+
             var __inArray = function(arr, ele) {
                 if (arr.indexOf(ele) === -1) {
                     return false;
@@ -37,8 +39,17 @@ directives.directive('vCheckbox', function() {
             };
 
             // if an item has been checked
-            scope.checked = function(value) {
-                return __inArray(checkedItems, value);
+            scope.checked = function(item) {
+                return __inArray(checkedlist, item.value);
+            };
+
+            scope.check = function(item) {
+                var value = item.value;
+                if (__inArray(__checkedList, item)) {
+
+                } else {
+                    __checkedList.push(item.value);
+                }
             };
         }
     }

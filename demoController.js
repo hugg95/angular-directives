@@ -2,29 +2,29 @@ var demoController = angular.module('demoController', []);
 
 demoController.controller('demoCtrl', ['$scope', function($scope) {
     $scope.items = [
-        {name: 'Bash', value: 'bash', checked: false},
-        {name: 'BASIC', value: 'basic', checked: false},
-        {name: 'C', value: 'c', checked: false},
-        {name: 'C++', value: 'c++', checked: false},
-        {name: 'C#', value: 'c#', checked: false},
-        {name: 'Fantom', value: 'fantom', checked: false},
-        {name: 'Delphi', value: 'delphi', checked: false},
-        {name: 'GO', value: 'go', checked: false},
-        {name: 'Groovy', value: 'groovy', checked: false},
-        {name: 'HTML', value: 'html', checked: false},
-        {name: 'JAVA', value: 'java', checked: false},
-        {name: 'JavaScript', value: 'javascript', checked: false},
-        {name: 'PHP', value: 'php', checked: false},
-        {name: 'Python', value: 'python', checked: false},
-        {name: 'Ruby', value: 'ruby', checked: false},
-        {name: 'Lisp', value: 'lisp', checked: false},
-        {name: 'Lua', value: 'lua', checked: false},
-        {name: 'MATLAB', value: 'matlab', checked: false},
-        {name: 'Object-C', value: 'objectc', checked: false},
-        {name: 'Perl', value: 'perl', checked: false},
-        {name: 'Swift', value: 'swift', checked: false},
-        {name: 'SQL', value: 'sql', checked: false},
-        {name: 'Visual Basic', value: 'visualbasic', checked: false}
+        {name: 'Bash', value: 'bash', valid: true},
+        {name: 'BASIC', value: 'basic', valid: true},
+        {name: 'C', value: 'c', valid: true},
+        {name: 'C++', value: 'c++', valid: true},
+        {name: 'C#', value: 'c#', valid: true},
+        {name: 'Fantom', value: 'fantom', valid: true},
+        {name: 'Delphi', value: 'delphi', valid: true},
+        {name: 'GO', value: 'go', valid: true},
+        {name: 'Groovy', value: 'groovy', valid: true},
+        {name: 'HTML', value: 'html', valid: true},
+        {name: 'JAVA', value: 'java', valid: true},
+        {name: 'JavaScript', value: 'javascript', valid: true},
+        {name: 'PHP', value: 'php', valid: true},
+        {name: 'Python', value: 'python', valid: true},
+        {name: 'Ruby', value: 'ruby', valid: true},
+        {name: 'Lisp', value: 'lisp', valid: true},
+        {name: 'Lua', value: 'lua', valid: true},
+        {name: 'MATLAB', value: 'matlab', valid: true},
+        {name: 'Object-C', value: 'objectc', valid: true},
+        {name: 'Perl', value: 'perl', valid: true},
+        {name: 'Swift', value: 'swift', valid: true},
+        {name: 'SQL', value: 'sql', valid: true},
+        {name: 'Visual Basic', value: 'visualbasic', valid: true}
     ];
-    $scope.checkedItems = [];
+    $scope.validItems = [];
 }]);
