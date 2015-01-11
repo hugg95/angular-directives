@@ -20,7 +20,9 @@ directives.directive('vCheckbox', function() {
         require: 'ngModel',
         scope: {
             ngModel: '=',
-            checkedList: '='
+            checkedList: '=',
+            min: '=',
+            max: '='
         },
         template: '<div ng-repeat="item in checkList">'
                   + '<span>{{item.name}}</span>'
@@ -29,7 +31,9 @@ directives.directive('vCheckbox', function() {
         link: function(scope, eles, attrs) {
 
             scope.checkList = scope.ngModel;
-            var __checkedList = scope.checkedList;
+            var __checkedList = scope.checkedList,
+                MIN = scope.min ? scope.min : 0,
+                MAX = scope.max ? scope.max : 0;
 
             // check whether an element is in array
             var __inArray = function(arr, ele) {
@@ -87,8 +91,9 @@ directives.directive('vCheckbox', function() {
                 } else {
                     __checkedList.push(item);
                 }
-                __limit();
-                console.log(__checkedList);
+                if (MIN || MAX) {
+                    __limit();
+                }
             };
         }
     }
