@@ -1,4 +1,4 @@
 angular-directives
 ==================
 
-A staple collection of angular directives
+A commonly used collection of angular directives
