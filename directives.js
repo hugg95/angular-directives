@@ -30,10 +30,19 @@ directives.directive('vCheckbox', function() {
                   + '</div>',
         link: function(scope, eles, attrs) {
 
-            scope.checkList = scope.ngModel;
             var __checkedList = scope.checkedList,
                 MIN = scope.min ? scope.min : 0,
                 MAX = scope.max ? scope.max : 0;
+            scope.checkList = [];
+
+            (function() {
+                var i = 0, len = scope.ngModel.length;
+                for (; i < len; i++) {
+                    var item = scope.ngModel[i];
+                    item.valid = true;
+                    scope.checkList.push(item);
+                }
+            })();
 
             // check whether an element is in array
             var __inArray = function(arr, ele) {
