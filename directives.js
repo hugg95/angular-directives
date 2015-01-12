@@ -1,11 +1,11 @@
-/*******************************************************
- *  A staple collection of angular directives          *
- *  @author victor.li                                  *
- *  @version 1.0.0                                     *
- *  @date 1/11/2015                                    *
- *  @license MIT                                       *
- *                                                     *
- *******************************************************/
+/***********************************************************
+ *  A commonly used collection of angular directives       *
+ *  @author victor.li                                      *
+ *  @version 1.0.0                                         *
+ *  @date 1/11/2015                                        *
+ *  @lincense Released under terms of MIT lincense         *
+ *                                                         *
+ ***********************************************************/
 'use strict'
 var directives = angular.module('directives', []);
 
