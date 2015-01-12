@@ -1,11 +1,11 @@
-/***********************************************
- *  A staple collection of angular directives  *
- *  @author victor.li                          *
- *  @version 1.0.0                             *
- *  @date 1/11/2015                            *
- *  @license MIT                               *
- *                                             *
- ***********************************************/
+/*******************************************************
+ *  A staple collection of angular directives          *
+ *  @author victor.li                                  *
+ *  @version 1.0.0                                     *
+ *  @date 1/11/2015                                    *
+ *  @license MIT                                       *
+ *                                                     *
+ *******************************************************/
 'use strict'
 var directives = angular.module('directives', []);
 
@@ -54,6 +54,9 @@ directives.directive('vCheckbox', function() {
 
             // remove an element from array
             var __remove = function(arr, ele) {
+                if (arr.indexOf(ele) === -1) {
+                    return;
+                }
                 arr.splice(arr.indexOf(ele), 1);
             };
 
@@ -88,6 +91,9 @@ directives.directive('vCheckbox', function() {
                     __checkedList.limited = false;
                 }
             };
+
+            // start a limit check immediately after page rendering
+            __limit();
 
             // check whether an item has been checked
             scope.checked = function(item) {

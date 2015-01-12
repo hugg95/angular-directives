@@ -26,5 +26,5 @@ demoController.controller('demoCtrl', ['$scope', function($scope) {
         {name: 'SQL', value: 'sql'},
         {name: 'Visual Basic', value: 'visualbasic'}
     ];
-    $scope.checkedList = [$scope.items[0], $scope.items[1], $scope.items[2]];
+    $scope.checkedList = [$scope.items[0], $scope.items[1]];
 }]);
