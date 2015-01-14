@@ -1,31 +1,20 @@
 <div class="container">
-
-  <div ng-include="'components/navbar/navbar.html'"></div>
-
-  <div class="jumbotron">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p><a class="btn" ng-href="#">Splendid!</a></p>
-  </div>
-
-  <div class="col" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-    <div class="thumbnail">
-      <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-      <div class="caption">
-        <h3>{{awesomeThing.title}}</h3>
-        <p>{{awesomeThing.description}}</p>
-        <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-      </div>
+    <h3>Directives list</h3>
+    <div class="items circle" ng-controller="MainCtrl">
+        <table>
+            <tr>
+                <td>index</td>
+                <td>name</td>
+                <td>status</td>
+            </tr>
+            <tr ng-repeat="item in items">
+                    <td ng-bind="$index+1 + '.'"></td>
+                    <td><a class="link" ng-href="{{item.link}}" ng-bind="item.name"></a></td>
+                    <td ng-if="item.status == 0" class="need-l-space" class="done">released</td>
+                    <td ng-if="item.status == 1" class="need-l-space" class="in-progress">under development</td>
+                    <td ng-if="item.status == 2" class="need-l-space" class="todo">todo</td>
+            </tr>
+        </table>
     </div>
-  </div>
-
-  <hr>
-
-  <div class="footer">
-    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
-  </div>
-
+    <div class="footer"></div>
 </div>

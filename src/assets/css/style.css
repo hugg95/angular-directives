@@ -1,0 +1,59 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.circle {
+    border-radius: 3px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.link {
+    color: #083139;
+}
+
+.need-l-space {
+    margin-left: 20px;
+}
+
+.need-r-space {
+    margin-right: 20px;
+}
+
+.done,
+.success {
+    color: green;
+}
+
+.fail,
+.todo {
+    color: red;
+}
+
+.in-progress {
+    color: pink;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #2ba5e9;
+}
+
+.items {
+    padding: 20px 0;
+    border: 1px solid #32c9e8;
+}
+
+.item {
+    padding: 2px 5px;
+}
