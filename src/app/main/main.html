@@ -2,19 +2,23 @@
     <h3>Directives list</h3>
     <div class="items circle" ng-controller="MainCtrl">
         <table>
-            <tr>
+            <!--tr>
                 <td>index</td>
                 <td>name</td>
                 <td>status</td>
-            </tr>
+            </tr-->
             <tr ng-repeat="item in items">
                     <td ng-bind="$index+1 + '.'"></td>
                     <td><a class="link" ng-href="{{item.link}}" ng-bind="item.name"></a></td>
-                    <td ng-if="item.status == 0" class="need-l-space" class="done">released</td>
-                    <td ng-if="item.status == 1" class="need-l-space" class="in-progress">under development</td>
-                    <td ng-if="item.status == 2" class="need-l-space" class="todo">todo</td>
+                    <td>
+                        <span ng-if="item.status == 0" class="need-l-space done">released</span>
+                        <span ng-if="item.status == 1" class="need-l-space in-progress">under development</span>
+                        <span ng-if="item.status == 2" class="need-l-space todo">todo</span>
+                    </td>
             </tr>
         </table>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+        <p>Released under terms of MIT lincense</p>
+    </div>
 </div>

@@ -35,7 +35,7 @@ body {
 }
 
 .in-progress {
-    color: pink;
+    color: blue;
 }
 
 .container {
@@ -54,6 +54,13 @@ body {
     border: 1px solid #32c9e8;
 }
 
-.item {
-    padding: 2px 5px;
+.items > table {
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+    color: gray;
 }
